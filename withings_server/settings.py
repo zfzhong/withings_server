@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-y2skidy%ng2i^3u7-01-6&nfy(y86p-c!j^9_osn@!%1_^rfy+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -52,10 +52,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'rest_framework',
-    "accounts",
-    "withings",
-
+    "rest_framework",
+    "accounts.apps.AccountsConfig",
+    "withings.apps.WithingsConfig",
 ]
 
 AUTH_USER_MODEL = "accounts.CustomUser" # User CustomUser for authentication
