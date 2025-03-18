@@ -34,6 +34,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),    
     path('oauth2/', withingsviews.oauth2),
+    path('callback/', withingsviews.callback2),
     path('getdevices/', withingsviews.getdevices),
     path('getrawdata/', withingsviews.get_rawdata),
     path("withings_experiments/", withingsviews.withings_experiments),
