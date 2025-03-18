@@ -37,5 +37,6 @@ urlpatterns = [
     path('callback/', withingsviews.callback2),
     path('getdevices/', withingsviews.getdevices),
     path('getrawdata/', withingsviews.get_rawdata),
+    path('activate/', withingsviews.activate),
     path("withings_experiments/", withingsviews.withings_experiments),
 ]
