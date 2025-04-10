@@ -136,7 +136,7 @@ def activate(request):
 
     devices = Device.objects.filter(userid=userid)
     if devices.count() <= 0:
-        return JsonResponse({"error": "not device associated with userid:%s" % userid})
+        return JsonResponse({"error": "no device associated with userid:%s" % userid})
 
     hash_deviceid = devices[0].hash_deviceid
 
